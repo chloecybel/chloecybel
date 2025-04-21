@@ -1,0 +1,154 @@
+<!-- Tutorial from https://www.w3schools.com/howto/default.asp & https://www.w3schools.com/howto/howto_website_create_portfolio.asp -->
+
+<!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="UTF-8">
+     <script src = "p5.min.js"></script>
+  
+  <style>
+
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+      .scrollmenu {
+        background-color: #f5f0dc;
+        overflow-x: auto;
+        white-space: nowrap;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .scrollmenu .menu-links {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .scrollmenu a {
+        display: inline-block;
+        color: hsl(21, 17%, 49%);
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .scrollmenu a:hover {
+        background-color: #ffffff;
+    }
+
+    .name-tag {
+        padding: 14px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: hsl(21, 17%, 49%);
+    }
+
+    .parallax {
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border: 70px solid #f5f0dc; 
+        box-sizing: border-box; 
+    }
+
+    .text-block {
+        padding: 60px;
+        text-align: center;
+        background-color: #f5f0dc;
+        color: hsl(21, 17%, 49%);
+        font-size: 36px;
+        margin: 0;
+    }
+
+    h5{
+        font-family: sans-serif;
+        color: hsl(21, 17%, 49%);
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+       max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: #f5f0dc;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .parallax-1 { background-image: url('HOME.jpg'); }
+    .parallax-2 { background-image: url('Community.jpg'); }
+    .parallax-3 { background-image: url('Land.jpg'); }
+    .parallax-4 { background-image: url('House.jpg'); }
+    
+  </style>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    <div class="scrollmenu">
+    <div class="menu-links">
+        <a href="#home">HOME</a>
+        <a href="#community">COMMUNITY CENTER</a>
+        <a href="#urban">URBAN LANDSCAPE</a>
+        <a href="#humber">HUMBER HILL HOUSE</a>
+    </div>
+
+      <span class="name-tag">CHLOE CYBEL ESTARIS CARABBACAN</span>
+    </div>
+
+    <div class="parallax parallax-1" id="home"></div>
+
+    <div class="text-block">  "MAGNET OF BELONGING" COMMUNITY CENTER</div>
+    <div class="parallax parallax-2" id="community"></div>
+
+    <div class="text-block">"WAVES OF SENSORY" URBAN LANDSCAPE</div>
+    <div class="parallax parallax-3" id="urban"></div>
+    
+    <div class="text-block">THE HUMBER HILL HOUSE </div>
+    <div class="parallax parallax-4" id="humber"></div>
+
+  </body>
+</html>
